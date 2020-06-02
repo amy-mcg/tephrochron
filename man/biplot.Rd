@@ -4,18 +4,18 @@
 \alias{biplot}
 \title{Element biplots}
 \usage{
-biplot(data, x, y, colour, symbol)
+biplot(data, colx, coly, colour, symbol)
 }
 \arguments{
 \item{data}{A data frame containing element geochemistries}
 
-\item{x}{The variable to be plotted on the x axis}
-
-\item{y}{The variable to be plotted on the y axis}
-
 \item{colour}{The variable which sets the plotting colour (e.g. sample id)}
 
 \item{symbol}{The variable which sets the plotting symbol (e.g. site, volcano)}
+
+\item{x}{The variable to be plotted on the x axis}
+
+\item{y}{The variable to be plotted on the y axis}
 }
 \value{
 A simple biplot

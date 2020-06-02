@@ -21,7 +21,7 @@ splom(data, colx, coly, colour, symbol)
 A scatterplot matrix showing selected element geochemistries
 }
 \description{
-Create a scatterplot matrix showing element geochemistries
+Create a scatterplot matrix showing all element geochemistries
 }
 \examples{
 plot <- biplot(data, 4, 10, Sample_ID, Site);
