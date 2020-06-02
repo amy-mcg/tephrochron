@@ -70,10 +70,3 @@ splom_select <- function(data, cols, colour, symbol){
   splom_select <- GGally::ggpairs(data, columns = {{cols}}, ggplot2::aes(color = {{colour}}, symbol = {{symbol}}));
   return(splom_select);
 }
-
-
-
-
-
-
-roxygenise();      # Builds the help files
