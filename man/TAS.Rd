@@ -6,26 +6,15 @@
 \usage{
 TAS()
 }
-\arguments{
-\item{data}{A data frame containing the columns SiO2, K2O, Na2O, Total}
-
-\item{ymin}{The lower depth of the sample}
-
-\item{ymax}{The upper depth of the sample}
-
-\item{concs}{Glass shard concentrations}
-
-\item{colour}{The variable which sets the plotting colour (e.g. ash fall)}
-}
 \value{
-A plot of glass shard concentration against depth
+An empty TAS diagram
 }
 \description{
-Create a TAS plot, using fields of different magma composition after Le Maitre (2002). Based on code by John Stevenson: https://all-geo.org/volcan01010/2015/01/easily-plot-magma-compositions-tas-diagrams-in-python/
+Call a blank TAS plot (I have no idea why you'd want to do this but to each their own), using fields of different magma composition after Le Maitre (2002). Based on code by John Stevenson: https://all-geo.org/volcan01010/2015/01/easily-plot-magma-compositions-tas-diagrams-in-python/
 }
 \details{
 Le Maitre RW (2002) Igneous rocks: IUGS classification and glossary of terms: recommendations of the International Union of Geological Sciences Subcommission on the Systematics of igneous rocks, 2nd ed. Cambridge University Press, Cambridge
 }
 \examples{
-plot <- strat_plot(data, Lower_m, Upper_m, Conc_sg, Fall);
+TAS()
 }

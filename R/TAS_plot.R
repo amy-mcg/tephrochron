@@ -1,20 +1,15 @@
 #' TAS plot
 #'
-#' Create a TAS plot, using fields of different magma composition after Le Maitre (2002). Based on code by John Stevenson: https://all-geo.org/volcan01010/2015/01/easily-plot-magma-compositions-tas-diagrams-in-python/
+#' Call a blank TAS plot (I have no idea why you'd want to do this but to each their own), using fields of different magma composition after Le Maitre (2002). Based on code by John Stevenson: https://all-geo.org/volcan01010/2015/01/easily-plot-magma-compositions-tas-diagrams-in-python/
 #'
 #' Le Maitre RW (2002) Igneous rocks: IUGS classification and glossary of terms: recommendations of the International Union of Geological Sciences Subcommission on the Systematics of igneous rocks, 2nd ed. Cambridge University Press, Cambridge
 #'
-#' @param data A data frame containing the columns SiO2, K2O, Na2O, Total
-#' @param ymin The lower depth of the sample
-#' @param ymax The upper depth of the sample
-#' @param concs Glass shard concentrations
-#' @param colour The variable which sets the plotting colour (e.g. ash fall)
-#' @return A plot of glass shard concentration against depth
+#' @param
+#' @return An empty TAS diagram
 #' @examples
-#' plot <- strat_plot(data, Lower_m, Upper_m, Conc_sg, Fall);
+#' TAS()
 #' @export
 #'
-
 TAS <- function(){
   TAS <- ggplot2::ggplot()+
     ggplot2::geom_segment(ggplot2::aes(x =41, y =0, xend = 41, yend = 7))  +
@@ -55,6 +50,23 @@ TAS <- function(){
   return(TAS);
 }
 
+
+#' TAS plot
+#'
+#' Create a TAS plot, using fields of different magma composition after Le Maitre (2002). Based on code by John Stevenson: https://all-geo.org/volcan01010/2015/01/easily-plot-magma-compositions-tas-diagrams-in-python/
+#'
+#' Le Maitre RW (2002) Igneous rocks: IUGS classification and glossary of terms: recommendations of the International Union of Geological Sciences Subcommission on the Systematics of igneous rocks, 2nd ed. Cambridge University Press, Cambridge
+#'
+#' @param data A data frame containing the columns SiO2, K2O, Na2O, Total
+#' @param ymin The lower depth of the sample
+#' @param ymax The upper depth of the sample
+#' @param concs Glass shard concentrations
+#' @param colour The variable which sets the plotting colour (e.g. ash fall)
+#' @return A plot of glass shard concentration against depth
+#' @examples
+#' plot <- strat_plot(data, Lower_m, Upper_m, Conc_sg, Fall);
+#' @export
+#'
 TAS_plot <- function(data, colour, symbol){
   #####NORMALISE DATA
   SiO2_n <- (data$SiO2 / data$Total) * 100
