@@ -17,7 +17,7 @@ build_rf <- function(data, classifier){
   data.full <- dplyr::select(data, c({{ classifier }}, "SiO2",	"TiO2",	"Al2O3",	"FeOt",	"MnO",	"MgO",	"CaO",	"Na2O",	"K2O"))
   colnames(data.full) <- c("class.rf", "SiO2",	"TiO2",	"Al2O3",	"FeOt",	"MnO",	"MgO",	"CaO",	"Na2O",	"K2O")
   data.full$class.rf <- as.factor(data.full$class.rf)
-  data.full <- na.omit(data.full)
+  data.full <- stats::na.omit(data.full)
 
   ##Divide the dataset into a training and test dataset
   base::set.seed(1234)
@@ -29,7 +29,7 @@ build_rf <- function(data, classifier){
 model.rf <- randomForest::randomForest(class.rf ~ ., data = data.train)
 
 model.performance.train <- table(stats::predict(model.rf), data.train$class.rf)
-error.plot <- plot(model.rf)
+error.plot <- graphics::plot(model.rf)
 variable.importance <- randomForest::importance(model.rf)
 eruption.pred <- stats::predict(model.rf, newdata=data.test)
 model.performance.test <- table(eruption.pred, data.test$class.rf)

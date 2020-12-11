@@ -4,7 +4,7 @@
 #' @param data A data frame containing element geochemistries of unknown origin
 #' @return An additional column in the data frame stating the most likely origin for the tephra, based on the model
 #' @examples
-#' data.classified <- (data, model.rf);
+#' data.classified <- (model.rf, new.data);
 #'
 #'
 #
